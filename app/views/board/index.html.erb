@@ -2,9 +2,11 @@
 
 <a href="/new"><h2>글쓰기</h2></a>
 
-<% @board.each do |q| %>
+<% @Board.each do |q| %>
+<hr>
     질문번호 : <%= q.id %><br>
-    제목 : <%= q.title %> <br>
+    제목 : <a href="/show<%= q.id %>"><%= q.title %></a> <br>
     작성자 : <%= q.editor %> <br>
 
 <% end %>
+<hr>

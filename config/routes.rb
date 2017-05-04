@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'my_board' => 'board#index'
   post '/create' => 'board#create'
 
-  get 'board/show'
+  get 'show' => 'board#show'
+  get 'edit' => 'board#edit'
 
   get 'board/edit'
 

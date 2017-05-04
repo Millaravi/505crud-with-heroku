@@ -5,15 +5,19 @@ class BoardController < ApplicationController
 
   def new
   
+  end
+  
+  def create
+    
     @makeBoard = Post.new
     @makeBoard.title = params[:input_title]
     @makeBoard.editor = params[:input_editor]
-    @makeBoard.text = params[:input_text]
     @makeBoard.save
     
   end
 
   def show
+    @Board = Post.all
   
   end
 

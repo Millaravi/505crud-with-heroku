@@ -1,0 +1,10 @@
+<h1>게시판</h1>
+
+<a href="/new"><h2>글쓰기</h2></a>
+
+<% @board.each do |q| %>
+    질문번호 : <%= q.id %><br>
+    제목 : <%= q.title %> <br>
+    작성자 : <%= q.editor %> <br>
+
+<% end %>

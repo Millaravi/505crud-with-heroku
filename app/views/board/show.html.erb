@@ -1,0 +1,10 @@
+<% @board.each do |q| %>
+    질문번호 : <%= q.id %><br>
+    제목 : <%= q.title %> <br>
+    작성자 : <%= q.editor %> <br>
+    내용 : <%= q.content %> <br>
+
+<a href="/edit"><h1>[수정]</h1></a> <br>
+<h1>[삭제]</h1>
+
+<hr>

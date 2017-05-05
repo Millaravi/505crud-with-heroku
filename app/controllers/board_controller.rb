@@ -18,20 +18,16 @@ class BoardController < ApplicationController
   end
 
   def show
-    @Board = Post.all
+    show_id = params[:id]
+    @Board = Post.find(show_id)
     
   end
 
   def edit
     
-    edit_board = Post.find(params[:upd_board.id])
-    eidt_board.title = params[:input_title]
-    edit_board.editor = params[:input_editor]
-    edit_board.content = params[:input_content]
-    eidt_board.save
-    redirect_to '/'
-    
   end
+  
+  
   
   def update
     upd_id = params[:id]

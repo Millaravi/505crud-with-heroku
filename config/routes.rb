@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/show' => 'board#show'
   get '/edit' => 'board#edit'
   get '/delete/:id' => 'board#delete'
-  post '/update/:id' => 'board#update'
+  post '/update' => 'board#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

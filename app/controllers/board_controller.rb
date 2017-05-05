@@ -18,8 +18,7 @@ class BoardController < ApplicationController
   end
 
   def show
-    show_id = params[:id]
-    @Board = Post.find(show_id)
+    @Board = Post.find(params[:id])
     
   end
 

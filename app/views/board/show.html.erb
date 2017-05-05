@@ -1,11 +1,8 @@
-<% @Board.each do |q| %>
-    질문번호 : <%= q.id %><br>
-    제목 : <%= q.title %> <br>
-    작성자 : <%= q.editor %> <br>
-    내용 : <%= q.content %> <br>
+제목 : <%= b.title %><br>
+작성자 :<br>
+내용 :<br>
 
 <a href="/edit"><h6>[수정]</h6></a> <br>
-<a href="/delete/<%= q.id %>"><h6>[삭제]</h6></a>
+<h6>[삭제]</h6>
 
 <hr>
-<% end %>

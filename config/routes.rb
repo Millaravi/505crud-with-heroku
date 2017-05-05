@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/new' => 'board#new'
   post '/create' => 'board#create'
   
-  get '/show/:id' => 'board#show'
+  get '/show' => 'board#show'
   get '/edit' => 'board#edit'
   
   get '/delete/:id' => 'board#delete'

@@ -1,8 +1,33 @@
-
-    제목 :<%= @view_post.title %>    <br>
-    작성자 : <%= @view_post.editor %>     <br> 
-    내용 : <%= @view_post.content %> <br>
+    게시글
+    <h3>제목 :<%= @view_post.title %></h3>    <br>
+    <h3>작성자 : <%= @view_post.editor %></h3>     <br> 
+    <h3>내용 : <%= @view_post.content %></h3>  <br>
     
     <a href="/edit/<%= @view_post.id %>">[수정]</a>
     <a href="/delete/<%= params[:post_id] %>">[삭제]</a>
-<hr>
+    <hr>
+    댓글
+    <% @view_post.replies.each do |a| %>
+        <h3> 작성자 : <%= a.editor %></h3><br>
+        <h3> 내용 : <%= a.content %></h3><br>
+        <a href="/reply_delete/<%= a.id%>"> [댓글 삭제] </a>
+        <hr>
+        <% end %>
+        <br>
+        <br>
+        <br>
+
+       <form action="/reply_create" method="POST">
+         <div class="form-group">
+             <input type="hidden" name="post_id" value="<%= @view_post.id%>">
+            <label for="replyeditor">작성자</label>
+            <input name="inputEditor" type="string" class="validate" id="replyeditor"><br>
+          <label for="comment">댓글입력</label>
+          <textarea class="form-control" name="content" rows="5" id="comment"></textarea>
+            </div>
+    
+             <input type="submit" class="btn btn-info" value="댓글달기"></button> <br>
+             <br>
+             <br>
+             
+             <a href='/'>목록으로</a>

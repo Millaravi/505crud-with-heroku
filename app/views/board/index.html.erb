@@ -5,9 +5,12 @@
     </div>
 
 <% @Board.each do |q| %>
+
 <hr>
     번호 : <%= q.id %><br>
     제목 : <a href="/show/<%= q.id %>"><%= q.title %></a> <br>
-    작성자 : <%= q.editor %> <br>
+    작성자 : <%= q.editor %> <hr>
+    
 <% end %>
+
 <hr>
